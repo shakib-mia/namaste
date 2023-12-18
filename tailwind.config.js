@@ -15,6 +15,7 @@ export default {
         DEFAULT: "#000000",
         20: "#00000033",
       },
+      transparent: "#00000000",
     },
     extend: {
       fontSize: {
