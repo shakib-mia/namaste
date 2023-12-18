@@ -1,0 +1,52 @@
+@import url("https://fonts.cdnfonts.com/css/ranade");
+@import "./excon.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Excon-Variable";
+  @apply bg-secondary-light text-primary;
+}
+
+.container {
+  @apply px-3 xl:px-0 !max-w-[75rem] !mx-auto;
+}
+
+.btn-primary {
+  @apply bg-primary text-secondary-light px-10 py-4;
+}
+
+nav {
+  transition: height 0.3s;
+  @apply h-24;
+}
+
+h1 {
+  @apply text-6xl;
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-4xl;
+}
+
+#nav-check:checked + nav {
+  @apply h-[21rem] xl:h-40 
+  /* height: 10rem; */
+  /* @apply animate-[navHeight] */
+  /* animation: navHeight 0.5s forwards; */
+  /* duration: 1s; */;
+}
+
+@keyframes navHeight {
+  from {
+    @apply h-24;
+  }
+  to {
+    @apply h-96 xl:h-40;
+  }
+}
