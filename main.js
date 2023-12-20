@@ -27,7 +27,7 @@ document
 // console.log();
 
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
+  $("#tutorial .owl-carousel").owlCarousel({
     items: 3,
     margin: 20,
     dots: true,
@@ -45,5 +45,11 @@ $(document).ready(function () {
         items: 3,
       },
     },
+  });
+
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    margin: 20,
+    dots: true,
   });
 });

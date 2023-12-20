@@ -92,7 +92,7 @@
             account of the system.
           </p>
         </div>
-        <div class="container mt-16">
+        <div class="container mt-16" id="tutorial">
           <div class="owl-carousel">
             <div class="group">
               <div class="relative">
@@ -174,13 +174,13 @@
           <div class="flex gap-10">
             <img
               src="./assets/icons/arrow.svg"
-              onclick="handleSlideChange('prev')"
+              onclick="handleSlideChange('prev', 'tutorial')"
               class="cursor-pointer rounded-full"
               alt="left-arrow"
             />
             <img
               src="./assets/icons/arrow.svg"
-              onclick="handleSlideChange('next')"
+              onclick="handleSlideChange('next', 'tutorial')"
               class="rotate-180 cursor-pointer rounded-full"
               alt="right-arrow"
             />
@@ -219,27 +219,172 @@
 
       <!-- Start with us Section -->
       <section
-        class="grid grid-cols-1 xl:grid-cols-2 items-center gap-[4.63rem] container overflow-y-hidden"
+        class="bg-[size:0_0] xl:bg-[size:auto_100%] bg-no-repeat py-10 xl:py-0 xl:h-screen"
+        style="
+          background-image: url(./assets/images/start-with-us.jpg);
+          background-position-x: right;
+        "
       >
-        <aside class="xl:py-[7.5rem]">
-          <h2 class="text-black font-medium mb-6">
-            Start with us the body and mind clensing
-          </h2>
-          <p class="text-[1.125rem] mb-10">
-            No one rejects, dislikes, or avoids pleasure itself, because it is
-            pleasure, but because those who do not know how to pursue pleasure
-            rationally encounter consequences that are extremely painful.
-          </p>
-          <button class="btn-primary">START YOUR JOURNEY</button>
-        </aside>
+        <div
+          class="container grid grid-cols-1 xl:grid-cols-2 items-center gap-[4.63rem]"
+        >
+          <aside class="xl:py-[7.5rem]">
+            <h2 class="text-black font-medium mb-6">
+              Start with us the body and mind clensing
+            </h2>
+            <p class="text-[1.125rem] mb-10">
+              No one rejects, dislikes, or avoids pleasure itself, because it is
+              pleasure, but because those who do not know how to pursue pleasure
+              rationally encounter consequences that are extremely painful.
+            </p>
+            <button class="btn-primary">START YOUR JOURNEY</button>
+          </aside>
 
-        <!-- <aside> -->
-        <img
+          <!-- <aside> -->
+          <!-- <img
           src="./assets/images/start-with-us.jpg"
           alt="start with us"
           class="xl:absolute right-0 w-full xl:w-auto ml-auto xl:h-[35%]"
-        />
-        <!-- </aside> -->
+        /> -->
+          <!-- </aside> -->
+        </div>
+      </section>
+
+      <!-- Discover Section -->
+      <section class="py-24 bg-primary">
+        <div class="w-full xl:w-1/2 mx-auto text-center">
+          <h1 class="font-bold text-secondary-light">
+            Discover yourself through yoga
+          </h1>
+
+          <button class="btn-secondary mt-[3.75rem]">START YOUR JOURNEY</button>
+        </div>
+      </section>
+
+      <!-- Video Courses -->
+
+      <section class="relative">
+        <div class="pb-[23.8rem] pt-28">
+          <div class="w-1/2 mx-auto text-center">
+            <h2 class="font-medium">Explore our video courses today.</h2>
+            <p class="text-[1.125rem] w-10/12 mx-auto">
+              Practice anywhere, anytime. Explore our online classes as new way
+              to exercise and learn more about yourself.
+            </p>
+          </div>
+        </div>
+        <div class="absolute top-[50vh] w-full flex justify-center">
+          <div class="relative">
+            <img
+              src="./assets/icons/play-white.svg"
+              class="absolute top-0 right-0 left-0 bottom-0 m-auto cursor-pointer"
+              alt=""
+            />
+            <img
+              src="./assets/images/explore-video-placeholder.jpg"
+              class="rounded-xl w-11/12 mx-auto xl:w-auto xl:h-[35rem]"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Testmonial -->
+      <section
+        class="h-screen w-full bg-primary pt-[25rem] text-secondary-light"
+      >
+        <div class="container relative" id="testimonial">
+          <!-- Testimonial Slider -->
+          <div class="owl-carousel">
+            <div class="flex gap-16 items-start">
+              <img
+                src="./assets/icons/quote.svg"
+                class="!w-[8.25rem]"
+                alt="quote"
+              />
+              <aside>
+                <h3>
+                  I’ve been to a few different places before but nothing
+                  compares to this. The flexible schedule is great.
+                </h3>
+                <div class="flex mt-16 gap-[1.19rem]">
+                  <img
+                    src="./assets/images/manya-bansal.jpg"
+                    class="!w-[4.75rem] rounded-full"
+                    alt=""
+                  />
+                  <aside>
+                    <h6 class="text-xl mb-1">Mannya Bansal</h6>
+                    <p class="text-[1.125rem] text-secondary">CEO</p>
+                  </aside>
+                </div>
+              </aside>
+            </div>
+            <div class="flex gap-16 items-start">
+              <img
+                src="./assets/icons/quote.svg"
+                class="!w-[8.25rem]"
+                alt="quote"
+              />
+              <aside>
+                <h3>
+                  I’ve been to a few different places before but nothing
+                  compares to this. The flexible schedule is great.
+                </h3>
+                <div class="flex mt-16 gap-[1.19rem]">
+                  <img
+                    src="./assets/images/manya-bansal.jpg"
+                    class="!w-[4.75rem] rounded-full"
+                    alt=""
+                  />
+                  <aside>
+                    <h6 class="text-xl mb-1">Mannya Bansal</h6>
+                    <p class="text-[1.125rem] text-secondary">CEO</p>
+                  </aside>
+                </div>
+              </aside>
+            </div>
+            <div class="flex gap-16 items-start">
+              <img
+                src="./assets/icons/quote.svg"
+                class="!w-[8.25rem]"
+                alt="quote"
+              />
+              <aside>
+                <h3>
+                  I’ve been to a few different places before but nothing
+                  compares to this. The flexible schedule is great.
+                </h3>
+                <div class="flex mt-16 gap-[1.19rem]">
+                  <img
+                    src="./assets/images/manya-bansal.jpg"
+                    class="!w-[4.75rem] rounded-full"
+                    alt=""
+                  />
+                  <aside>
+                    <h6 class="text-xl mb-1">Mannya Bansal</h6>
+                    <p class="text-[1.125rem] text-secondary">CEO</p>
+                  </aside>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="flex gap-10 absolute right-0 bottom-0 z-[99999]">
+            <img
+              src="./assets/icons/arrow.svg"
+              onclick="handleSlideChange('prev', 'testimonial')"
+              class="cursor-pointer rounded-full"
+              alt="left-arrow"
+            />
+            <img
+              src="./assets/icons/arrow.svg"
+              onclick="handleSlideChange('next', 'testimonial')"
+              class="rotate-180 cursor-pointer rounded-full"
+              alt="right-arrow"
+            />
+          </div>
+        </div>
       </section>
     </main>
 
@@ -248,9 +393,8 @@
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
     <script type="module" src="./main.js"></script>
     <script>
-      const handleSlideChange = (direction) => {
-        // console.log(document.getElementsByClassName(`owl-${direction}));
-        document.getElementsByClassName(`owl-${direction}`)[0].click();
+      const handleSlideChange = (direction, containerId) => {
+        document.querySelector(`#${containerId} .owl-${direction}`).click();
       };
     </script>
   </body>
