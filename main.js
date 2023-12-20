@@ -21,3 +21,29 @@ function handleScrollDown() {
 document
   .getElementById("scrollDownImage")
   .addEventListener("click", handleScrollDown);
+// document.getElementById("slider").style.marginLeft =
+//   document.getElementById("tutorial").getBoundingClientRect().left + "px";
+
+// console.log();
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 3,
+    margin: 20,
+    dots: true,
+    // nav: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+
+      768: {
+        items: 2,
+      },
+
+      1024: {
+        items: 3,
+      },
+    },
+  });
+});

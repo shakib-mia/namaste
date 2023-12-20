@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+	<title>image</title>
+	<style>
+		.s0 { fill: #fff4eb } 
+		.s1 { fill: none;stroke: #303030;stroke-width: 2.3 } 
+	</style>
+	<path id="Layer" class="s0" d="m128 22c0 12.2-9.8 22-22 22-12.2 0-22-9.8-22-22 0-12.2 9.8-22 22-22 12.2 0 22 9.8 22 22z"/>
+	<path id="Layer" fill-rule="evenodd" class="s1" d="m102 29.9l8.2-8.1-8.2-8.2"/>
+	<path id="Layer" class="s0" d="m0 22c0-12.2 9.8-22 22-22 12.2 0 22 9.8 22 22 0 12.2-9.8 22-22 22-12.2 0-22-9.8-22-22z"/>
+	<path id="Layer" fill-rule="evenodd" class="s1" d="m26 14.1l-8.2 8.1 8.2 8.2"/>
+</svg>
