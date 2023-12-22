@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  /* @apply scroll-smooth; */
+}
+
 body {
   font-family: "Excon-Variable";
   @apply bg-secondary-light text-primary;
@@ -37,7 +41,9 @@ nav {
 h1,
 h2,
 h3,
-button {
+button,
+footer p,
+footer h6 {
   font-family: "Ranade";
 }
 
@@ -72,4 +78,12 @@ h3 {
 
 #tutorial .owl-carousel .owl-stage-outer {
   overflow: visible !important;
+}
+
+#video-container {
+  @apply hidden;
+}
+
+#video-check:checked + #video-container {
+  @apply flex;
 }

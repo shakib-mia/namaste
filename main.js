@@ -31,7 +31,6 @@ $(document).ready(function () {
     items: 3,
     margin: 20,
     dots: true,
-    // nav: true,
     responsive: {
       0: {
         items: 1,

@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Namaste</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -17,9 +17,37 @@
   </head>
   <body>
     <!-- Navbar Section -->
+
+    <input type="checkbox" class="hidden" id="video-check" />
+    <div
+      class="fixed left-0 right-0 h-screen w-screen backdrop-blur z-[999999999999] justify-center items-center"
+      id="video-container"
+    >
+      <div class="w-11/12 xl:w-1/2 h-auto text-center relative">
+        <video
+          src="./assets/videos/yoga.mp4"
+          autoplay
+          muted
+          class="mb-3 h-full w-full"
+          controls
+        ></video>
+
+        <label
+          for="video-check"
+          class="absolute -top-12 -right-3 xl:-top-10 xl:-right-10 text-3xl text-white cursor-pointer"
+        >
+          &times;
+        </label>
+        Video by
+        <a href="https://www.pexels.com/video/man-doing-a-plank-4325592/"
+          >Taryn cottonbro</a
+        >
+      </div>
+    </div>
+
     <input type="checkbox" name="" id="nav-check" class="hidden" />
     <nav
-      class="bg-secondary-light py-[1.88rem] border-b border-secondary h-24 overflow-hidden"
+      class="bg-secondary-light py-[1.88rem] border-b border-secondary h-24 overflow-hidden absolute w-full z-[999999]"
     >
       <div class="container flex justify-between items-center relative">
         <label class="cursor-pointer" for="nav-check">
@@ -29,7 +57,9 @@
             class="w-[1.375rem]"
           />
         </label>
-        <img src="./assets/images/logo.jpg" alt="logo" class="w-20" />
+        <a href="#">
+          <img src="./assets/images/logo.jpg" alt="logo" class="w-20" />
+        </a>
         <div class="flex gap-2 items-center">
           <img src="./assets/icons/bag.svg" alt="logo" class="w-[1.375rem]" />
           <p class="text-md hidden xl:block">Cart</p>
@@ -37,20 +67,28 @@
       </div>
       <div class="container">
         <ul class="flex flex-col xl:flex-row gap-5 mt-10">
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#tutorial-section">Tutorial</a>
+          </li>
+          <li>
+            <a href="#courses-section">Courses</a>
+          </li>
+          <li>
+            <a href="#testimonial">Testimonials</a>
+          </li>
+          <li>
+            <a href="#get-started">Get Started</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
 
-    <header
-      class="bg-secondary-light absolute w-full -z-10 top-0 left-0 h-screen"
-    >
+    <header class="bg-secondary-light w-full -z-10 top-0 left-0 h-screen">
       <div class="relative h-full">
         <div
           class="bg-secondary w-screen h-96 bottom-0 xl:w-[38rem] z-0 absolute right-0 xl:h-screen"
@@ -81,9 +119,12 @@
       </div>
     </header>
     <!-- Main section -->
-    <main class="absolute top-[100vh] w-full">
+    <main>
       <!-- Tutorial Section -->
-      <section class="bg-primary text-secondary-light py-24 overflow-x-hidden">
+      <section
+        class="bg-primary text-secondary-light py-24 overflow-x-hidden"
+        id="tutorial-section"
+      >
         <div class="container" id="tutorial">
           <h2 class="font-bold mb-3 xl:mb-9">Learn with us</h2>
           <p class="text-base xl:text-md w-full xl:w-7/12">
@@ -101,7 +142,8 @@
                   class="rounded-xl"
                   alt="morning-routine"
                 />
-                <div
+                <label
+                  for="video-check"
                   class="absolute top-0 left-0 w-full bg-[#00000044] h-full rounded-xl opacity-0 group-hover:opacity-100 flex items-center justify-center cursor-pointer transition-[opacity] duration-700"
                 >
                   <img
@@ -109,7 +151,7 @@
                     class="!w-16 !h-16"
                     alt=""
                   />
-                </div>
+                </label>
               </div>
             </div>
 
@@ -120,7 +162,8 @@
                   class="rounded-xl"
                   alt="yoga-in-house"
                 />
-                <div
+                <label
+                  for="video-check"
                   class="absolute top-0 left-0 w-full bg-[#00000044] h-full rounded-xl opacity-0 group-hover:opacity-100 flex items-center justify-center cursor-pointer transition-[opacity] duration-700"
                 >
                   <img
@@ -128,7 +171,7 @@
                     class="!w-16 !h-16"
                     alt=""
                   />
-                </div>
+                </label>
               </div>
             </div>
 
@@ -139,7 +182,8 @@
                   class="rounded-xl"
                   alt="balance-yoga"
                 />
-                <div
+                <label
+                  for="video-check"
                   class="absolute top-0 left-0 w-full bg-[#00000044] h-full rounded-xl opacity-0 group-hover:opacity-100 flex items-center justify-center cursor-pointer transition-[opacity] duration-700"
                 >
                   <img
@@ -147,7 +191,7 @@
                     class="!w-16 !h-16"
                     alt=""
                   />
-                </div>
+                </label>
               </div>
             </div>
 
@@ -158,7 +202,8 @@
                   class="rounded-xl"
                   alt="yoga-in-beach"
                 />
-                <div
+                <label
+                  for="video-check"
                   class="absolute top-0 left-0 w-full bg-[#00000044] h-full rounded-xl opacity-0 group-hover:opacity-100 flex items-center justify-center cursor-pointer transition-[opacity] duration-700"
                 >
                   <img
@@ -166,7 +211,7 @@
                     class="!w-16 !h-16"
                     alt=""
                   />
-                </div>
+                </label>
               </div>
             </div>
           </div>
@@ -220,6 +265,7 @@
       <!-- Start with us Section -->
       <section
         class="bg-[size:0_0] xl:bg-[size:auto_100%] bg-no-repeat py-10 xl:py-0 xl:h-screen"
+        id="get-started"
         style="
           background-image: url(./assets/images/start-with-us.jpg);
           background-position-x: right;
@@ -263,9 +309,9 @@
 
       <!-- Video Courses -->
 
-      <section class="relative">
-        <div class="pb-[23.8rem] pt-28">
-          <div class="w-1/2 mx-auto text-center">
+      <section class="relative" id="courses-section">
+        <div class="pb-40 sm:pb-36 md:pb-72 xl:pb-[23.8rem] pt-28 container">
+          <div class="w-11/12 xl:w-1/2 mx-auto text-center">
             <h2 class="font-medium">Explore our video courses today.</h2>
             <p class="text-[1.125rem] w-10/12 mx-auto">
               Practice anywhere, anytime. Explore our online classes as new way
@@ -273,13 +319,17 @@
             </p>
           </div>
         </div>
-        <div class="absolute top-[50vh] w-full flex justify-center">
+        <div
+          class="w-full flex justify-center absolute top-[21rem] sm:top-[16rem] xl:top-[29rem]"
+        >
           <div class="relative">
-            <img
-              src="./assets/icons/play-white.svg"
-              class="absolute top-0 right-0 left-0 bottom-0 m-auto cursor-pointer"
-              alt=""
-            />
+            <label for="video-check">
+              <img
+                src="./assets/icons/play-white.svg"
+                class="absolute top-0 right-0 left-0 bottom-0 m-auto cursor-pointer"
+                alt=""
+              />
+            </label>
             <img
               src="./assets/images/explore-video-placeholder.jpg"
               class="rounded-xl w-11/12 mx-auto xl:w-auto xl:h-[35rem]"
@@ -291,12 +341,14 @@
 
       <!-- Testmonial -->
       <section
-        class="h-screen w-full bg-primary pt-[25rem] text-secondary-light"
+        id="
+       "
+        class="w-full bg-primary pt-44 sm:pt-72 pb-10 xl:pb-[7.5rem] xl:pt-[25rem] text-secondary-light"
       >
         <div class="container relative" id="testimonial">
           <!-- Testimonial Slider -->
           <div class="owl-carousel">
-            <div class="flex gap-16 items-start">
+            <div class="flex flex-col xl:flex-row gap-2 xl:gap-16 items-start">
               <img
                 src="./assets/icons/quote.svg"
                 class="!w-[8.25rem]"
@@ -307,7 +359,7 @@
                   I’ve been to a few different places before but nothing
                   compares to this. The flexible schedule is great.
                 </h3>
-                <div class="flex mt-16 gap-[1.19rem]">
+                <div class="flex mt-8 xl:mt-16 gap-[1.19rem]">
                   <img
                     src="./assets/images/manya-bansal.jpg"
                     class="!w-[4.75rem] rounded-full"
@@ -320,7 +372,7 @@
                 </div>
               </aside>
             </div>
-            <div class="flex gap-16 items-start">
+            <div class="flex flex-col xl:flex-row gap-2 xl:gap-16 items-start">
               <img
                 src="./assets/icons/quote.svg"
                 class="!w-[8.25rem]"
@@ -331,7 +383,7 @@
                   I’ve been to a few different places before but nothing
                   compares to this. The flexible schedule is great.
                 </h3>
-                <div class="flex mt-16 gap-[1.19rem]">
+                <div class="flex mt-8 xl:mt-16 gap-[1.19rem]">
                   <img
                     src="./assets/images/manya-bansal.jpg"
                     class="!w-[4.75rem] rounded-full"
@@ -344,7 +396,7 @@
                 </div>
               </aside>
             </div>
-            <div class="flex gap-16 items-start">
+            <div class="flex flex-col xl:flex-row gap-2 xl:gap-16 items-start">
               <img
                 src="./assets/icons/quote.svg"
                 class="!w-[8.25rem]"
@@ -355,7 +407,7 @@
                   I’ve been to a few different places before but nothing
                   compares to this. The flexible schedule is great.
                 </h3>
-                <div class="flex mt-16 gap-[1.19rem]">
+                <div class="flex mt-8 xl:mt-16 gap-[1.19rem]">
                   <img
                     src="./assets/images/manya-bansal.jpg"
                     class="!w-[4.75rem] rounded-full"
@@ -370,7 +422,7 @@
             </div>
           </div>
 
-          <div class="flex gap-10 absolute right-0 bottom-0 z-[99999]">
+          <div class="flex gap-10 absolute right-3 bottom-0 z-[99999]">
             <img
               src="./assets/icons/arrow.svg"
               onclick="handleSlideChange('prev', 'testimonial')"
@@ -387,6 +439,72 @@
         </div>
       </section>
     </main>
+
+    <footer
+      class="container py-[7.5rem] flex flex-wrap md:flex-nowrap justify-between gap-10 xl:gap-0"
+    >
+      <div class="w-full md:w-1/2 lg:w-[22%]">
+        <img src="./assets/images/logo.jpg" alt="logo" />
+        <p class="mt-6 mb-10 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+        </p>
+
+        <div class="flex gap-5">
+          <a
+            href="#"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+          >
+            <img src="./assets/icons/instagram.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+          >
+            <img src="./assets/icons/youtube.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+          >
+            <img src="./assets/icons/facebook.svg" alt="" />
+          </a>
+          <a
+            href="#"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+          >
+            <img src="./assets/icons/twitter.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-[13%]">
+        <h6 class="text-[1.125rem] font-medium">About</h6>
+        <ul class="mt-[2.31rem] flex flex-col gap-5">
+          <li class="opacity-80 text-sm">About Us</li>
+          <li class="opacity-80 text-sm">Features</li>
+          <li class="opacity-80 text-sm">News & Blog</li>
+          <li class="opacity-80 text-sm">Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="w-full md:w-1/2 lg:w-[13%]">
+        <h6 class="text-[1.125rem] font-medium">Support</h6>
+        <ul class="mt-[2.31rem] flex flex-col gap-5">
+          <li class="opacity-80 text-sm">FAQs</li>
+          <li class="opacity-80 text-sm">Support Center</li>
+          <li class="opacity-80 text-sm">Contact Us</li>
+          <li class="opacity-80 text-sm">Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="w-full md:w-1/2 lg:w-[13%]">
+        <h6 class="text-[1.125rem] font-medium">Contact Us</h6>
+        <ul class="mt-[2.31rem] flex flex-col gap-5">
+          <li class="opacity-80 text-sm">info@namaste.com</li>
+          <li class="opacity-80 text-sm">Terms & Agreement</li>
+          <li class="opacity-80 text-sm">Privacy Policy</li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
