@@ -10,6 +10,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"
@@ -96,7 +98,7 @@
         <div
           class="container grid grid-cols-1 md:grid-cols-2 items-center absolute left-0 right-0 mx-auto w-full h-full z-10"
         >
-          <aside class="pt-28 md:pt-0">
+          <aside class="pt-28 md:pt-0" data-aos="fade-right">
             <h1 class="font-bold">Relax. Recline. Wind Down.</h1>
             <p class="text-md tracking-[-0.045rem] w-10/12 mb-10 mt-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
@@ -105,13 +107,14 @@
             </p>
             <button class="btn-primary">Get Started</button>
           </aside>
-          <aside class="xl:py-28 xl:relative">
+          <aside class="xl:py-28 xl:relative" data-aos="fade-left">
             <img src="./assets/images/banner.jpg" alt="banner" />
 
             <img
               src="./assets/icons/scroll down.svg"
               alt="scroll down"
               class="absolute right-3 bottom-3 xl:-right-14 md:bottom-44 cursor-pointer w-10 md:w-28"
+              data-aos="fade-up"
               id="scrollDownImage"
             />
           </aside>
@@ -126,14 +129,20 @@
         id="tutorial-section"
       >
         <div class="container" id="tutorial">
-          <h2 class="font-bold mb-3 xl:mb-9">Learn with us</h2>
-          <p class="text-base xl:text-md w-full xl:w-7/12">
+          <h2 class="font-bold mb-3 xl:mb-9" data-aos="fade-right">
+            Learn with us
+          </h2>
+          <p
+            class="text-base xl:text-md w-full xl:w-7/12"
+            data-aos="fade-right"
+            data-aos-delay="50"
+          >
             But I must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
             account of the system.
           </p>
         </div>
-        <div class="container mt-16" id="tutorial">
+        <div class="container mt-16" id="tutorial" data-aos="fade-left">
           <div class="owl-carousel">
             <div class="group">
               <div class="relative">
@@ -245,19 +254,32 @@
           <img
             src="./assets/images/healthy-lifestyle.png"
             class="mx-auto xl:mx-0"
+            data-aos="fade-right"
             alt=""
           />
 
           <aside>
-            <h2 class="font-medium text-black">Healthy lifestyle with yoga.</h2>
-            <p class="mt-6 mb-10 text-md">
+            <h2 class="font-medium text-black" data-aos="fade-left">
+              Healthy lifestyle with yoga.
+            </h2>
+            <p
+              class="mt-6 mb-10 text-md"
+              data-aos="fade-left"
+              data-aos-delay="50"
+            >
               We are a Yoga Studio based in Sidney, Australia. Our goal is to
               promote a healthy lifestyle through practice of yoga and
               mindfulness. Classes are held in our studio space and online.
               Everyone is welcome to join our little community.
             </p>
 
-            <button class="btn-primary">ABOUT US</button>
+            <button
+              class="btn-primary"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              ABOUT US
+            </button>
           </aside>
         </div>
       </section>
@@ -275,15 +297,29 @@
           class="container grid grid-cols-1 xl:grid-cols-2 items-center gap-[4.63rem]"
         >
           <aside class="xl:py-[7.5rem]">
-            <h2 class="text-black font-medium mb-6">
+            <h2
+              class="text-black font-medium mb-6"
+              data-aos="fade-right"
+              data-aos-delay="0"
+            >
               Start with us the body and mind clensing
             </h2>
-            <p class="text-[1.125rem] mb-10">
+            <p
+              class="text-[1.125rem] mb-10"
+              data-aos="fade-right"
+              data-aos-delay="50"
+            >
               No one rejects, dislikes, or avoids pleasure itself, because it is
               pleasure, but because those who do not know how to pursue pleasure
               rationally encounter consequences that are extremely painful.
             </p>
-            <button class="btn-primary">START YOUR JOURNEY</button>
+            <button
+              class="btn-primary"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              START YOUR JOURNEY
+            </button>
           </aside>
 
           <!-- <aside> -->
@@ -299,11 +335,13 @@
       <!-- Discover Section -->
       <section class="py-24 bg-primary">
         <div class="w-full xl:w-1/2 mx-auto text-center">
-          <h1 class="font-bold text-secondary-light">
+          <h1 class="font-bold text-secondary-light" data-aos="zoom-in">
             Discover yourself through yoga
           </h1>
 
-          <button class="btn-secondary mt-[3.75rem]">START YOUR JOURNEY</button>
+          <button class="btn-secondary mt-[3.75rem]" data-aos="zoom-in">
+            START YOUR JOURNEY
+          </button>
         </div>
       </section>
 
@@ -312,8 +350,10 @@
       <section class="relative" id="courses-section">
         <div class="pb-40 sm:pb-36 md:pb-72 xl:pb-[23.8rem] pt-28 container">
           <div class="w-11/12 xl:w-1/2 mx-auto text-center">
-            <h2 class="font-medium">Explore our video courses today.</h2>
-            <p class="text-[1.125rem] w-10/12 mx-auto">
+            <h2 class="font-medium" data-aos="zoom-in">
+              Explore our video courses today.
+            </h2>
+            <p class="text-[1.125rem] w-10/12 mx-auto" data-aos="zoom-in">
               Practice anywhere, anytime. Explore our online classes as new way
               to exercise and learn more about yourself.
             </p>
@@ -322,7 +362,7 @@
         <div
           class="w-full flex justify-center absolute top-[21rem] sm:top-[16rem] xl:top-[29rem]"
         >
-          <div class="relative">
+          <div class="relative" data-aos="zoom-in">
             <label for="video-check">
               <img
                 src="./assets/icons/play-white.svg"
@@ -527,11 +567,14 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script type="module" src="./main.js"></script>
     <script>
       const handleSlideChange = (direction, containerId) => {
         document.querySelector(`#${containerId} .owl-${direction}`).click();
       };
+      AOS.init();
     </script>
   </body>
 </html>
