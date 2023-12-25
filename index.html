@@ -49,7 +49,7 @@
 
     <input type="checkbox" name="" id="nav-check" class="hidden" />
     <nav
-      class="bg-secondary-light py-[1.88rem] border-b border-secondary h-24 overflow-hidden absolute w-full z-[999999]"
+      class="bg-secondary-light py-4 xl:py-[1.88rem] border-b border-secondary h-auto absolute w-full z-[999999]"
     >
       <div class="container flex justify-between items-center relative">
         <label class="cursor-pointer" for="nav-check">
@@ -60,61 +60,86 @@
           />
         </label>
         <a href="#">
-          <img src="./assets/images/logo.jpg" alt="logo" class="w-20" />
+          <img src="./assets/images/logo.jpg" alt="logo" class="w-16 xl:w-20" />
         </a>
         <div class="flex gap-2 items-center">
           <img src="./assets/icons/bag.svg" alt="logo" class="w-[1.375rem]" />
           <p class="text-md hidden xl:block">Cart</p>
         </div>
       </div>
-      <div class="container">
-        <ul class="flex flex-col xl:flex-row gap-5 mt-10">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#tutorial-section">Tutorial</a>
-          </li>
-          <li>
-            <a href="#courses-section">Courses</a>
-          </li>
-          <li>
-            <a href="#testimonial">Testimonials</a>
-          </li>
-          <li>
-            <a href="#get-started">Get Started</a>
-          </li>
-        </ul>
-      </div>
     </nav>
+    <div
+      class="z-30 h-screen bg-black bg-opacity-50 fixed top-0 left-0"
+      id="drawer"
+    >
+      <div
+        class="absolute top-0 left-0 w-full lg:w-1/3 bg-secondary h-full"
+      ></div>
+      <ul
+        class="flex flex-col gap-5 mt-28 container absolute left-0 right-0 m-auto w-screen text-white"
+      >
+        <li onclick="closeCheckbox()">
+          <a href="#">Home</a>
+        </li>
+        <li onclick="closeCheckbox()">
+          <a href="#tutorial-section">Tutorial</a>
+        </li>
+        <li onclick="closeCheckbox()">
+          <a href="#courses-section">Courses</a>
+        </li>
+        <li onclick="closeCheckbox()">
+          <a href="#testimonial">Testimonials</a>
+        </li>
+        <li onclick="closeCheckbox()">
+          <a href="#get-started">Get Started</a>
+        </li>
+      </ul>
+    </div>
 
     <!-- Hero Section -->
 
-    <header class="bg-secondary-light w-full -z-10 top-0 left-0 h-screen">
+    <header
+      class="bg-secondary-light w-full -z-10 top-0 left-0 h-[106vh] md:h-screen"
+    >
       <div class="relative h-full">
         <div
-          class="bg-secondary w-screen h-96 bottom-0 xl:w-[38rem] z-0 absolute right-0 xl:h-screen"
+          class="bg-secondary w-screen h-72 bottom-0 xl:w-[38rem] z-0 absolute right-0 xl:h-screen"
         ></div>
         <div
           class="container grid grid-cols-1 md:grid-cols-2 items-center absolute left-0 right-0 mx-auto w-full h-full z-10"
         >
-          <aside class="pt-28 md:pt-0" data-aos="fade-right">
-            <h1 class="font-bold">Relax. Recline. Wind Down.</h1>
-            <p class="text-md tracking-[-0.045rem] w-10/12 mb-10 mt-6">
+          <aside class="py-14 sm:pt-2 md:pt-0">
+            <h1 class="font-bold" data-aos="fade-right" data-aos-delay="300">
+              Relax. Recline. Wind Down.
+            </h1>
+            <p
+              class="text-sm xl:text-md tracking-[-0.045rem] xl:w-10/12 my-5 xl:mb-10 xl:mt-6"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor purus non enim praesent
             </p>
-            <button class="btn-primary">Get Started</button>
+            <button
+              class="btn-primary"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
+              Get Started
+            </button>
           </aside>
-          <aside class="xl:py-28 xl:relative" data-aos="fade-left">
+          <aside
+            class="xl:py-28 relative -top-12 sm:top-0 md:top-0 w-full md:w-auto"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
             <img src="./assets/images/banner.jpg" alt="banner" />
 
             <img
               src="./assets/icons/scroll down.svg"
               alt="scroll down"
               class="absolute right-3 bottom-3 xl:-right-14 md:bottom-44 cursor-pointer w-10 md:w-28"
-              data-aos="fade-up"
               id="scrollDownImage"
             />
           </aside>
@@ -125,7 +150,7 @@
     <main>
       <!-- Tutorial Section -->
       <section
-        class="bg-primary text-secondary-light py-24 overflow-x-hidden"
+        class="bg-primary text-secondary-light py-12 xl:py-24 overflow-x-hidden"
         id="tutorial-section"
       >
         <div class="container" id="tutorial">
@@ -244,12 +269,12 @@
 
       <!-- LifeStyle Section -->
 
-      <section class="relative">
+      <section class="relative" id="features">
         <div
-          class="w-full xl:w-[38rem] absolute h-1/2 xl:h-full left-0 bg-secondary -z-10"
+          class="w-full xl:w-[38rem] absolute h-1/3 md:h-1/2 xl:h-full left-0 bg-secondary -z-10"
         ></div>
         <div
-          class="container py-24 grid xl:grid-cols-2 items-center z-[9999] gap-20"
+          class="container py-12 xl:py-24 grid xl:grid-cols-2 items-center z-[9999] gap-20"
         >
           <img
             src="./assets/images/healthy-lifestyle.png"
@@ -258,7 +283,7 @@
             alt=""
           />
 
-          <aside>
+          <aside class="overflow-x-hidden">
             <h2 class="font-medium text-black" data-aos="fade-left">
               Healthy lifestyle with yoga.
             </h2>
@@ -348,25 +373,30 @@
       <!-- Video Courses -->
 
       <section class="relative" id="courses-section">
-        <div class="pb-40 sm:pb-36 md:pb-72 xl:pb-[23.8rem] pt-28 container">
+        <div
+          class="pb-20 sm:pb-36 md:pb-72 xl:pb-[23.8rem] pt-10 xl:pt-28 container"
+        >
           <div class="w-11/12 xl:w-1/2 mx-auto text-center">
             <h2 class="font-medium" data-aos="zoom-in">
               Explore our video courses today.
             </h2>
-            <p class="text-[1.125rem] w-10/12 mx-auto" data-aos="zoom-in">
+            <p
+              class="text-base xl:text-[1.125rem] xl:w-10/12 mx-auto"
+              data-aos="zoom-in"
+            >
               Practice anywhere, anytime. Explore our online classes as new way
               to exercise and learn more about yourself.
             </p>
           </div>
         </div>
         <div
-          class="w-full flex justify-center absolute top-[21rem] sm:top-[16rem] xl:top-[29rem]"
+          class="w-full flex justify-center absolute top-[15rem] sm:top-[16rem] xl:top-[29rem]"
         >
           <div class="relative" data-aos="zoom-in">
             <label for="video-check">
               <img
                 src="./assets/icons/play-white.svg"
-                class="absolute top-0 right-0 left-0 bottom-0 m-auto cursor-pointer"
+                class="absolute top-0 right-0 left-0 bottom-0 m-auto cursor-pointer w-20 lg:w-auto"
                 alt=""
               />
             </label>
@@ -481,7 +511,7 @@
     </main>
 
     <footer
-      class="container py-[7.5rem] flex flex-wrap md:flex-nowrap justify-between gap-10 xl:gap-0"
+      class="container py-10 xl:py-[7.5rem] flex flex-wrap md:flex-nowrap justify-between gap-10 xl:gap-0"
     >
       <div class="w-full md:w-1/2 lg:w-[22%]">
         <img src="./assets/images/logo.jpg" alt="logo" />
@@ -492,56 +522,146 @@
         <div class="flex gap-5">
           <a
             href="#"
-            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full border border-primary hover:bg-transparent group transition"
           >
-            <img src="./assets/icons/instagram.svg" alt="" />
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-none group-hover:fill-primary transition"
+            >
+              <g id="ant-design:instagram-filled">
+                <path
+                  id="Vector"
+                  class="fill-secondary-light group-hover:fill-primary transition"
+                  d="M12.4997 9.24487C10.7078 9.24487 9.24536 10.7073 9.24536 12.4993C9.24536 14.2913 10.7078 15.7537 12.4997 15.7537C14.2917 15.7537 15.7541 14.2913 15.7541 12.4993C15.7541 10.7073 14.2917 9.24487 12.4997 9.24487ZM22.2605 12.4993C22.2605 11.1516 22.2727 9.81616 22.197 8.47094C22.1213 6.90844 21.7649 5.52172 20.6223 4.37914C19.4773 3.23412 18.093 2.88012 16.5305 2.80444C15.1829 2.72875 13.8474 2.74096 12.5022 2.74096C11.1545 2.74096 9.81909 2.72875 8.47387 2.80444C6.91137 2.88012 5.52465 3.23657 4.38207 4.37914C3.23705 5.52416 2.88305 6.90844 2.80737 8.47094C2.73168 9.8186 2.74389 11.154 2.74389 12.4993C2.74389 13.8445 2.73168 15.1824 2.80737 16.5276C2.88305 18.0901 3.2395 19.4768 4.38207 20.6194C5.52709 21.7644 6.91137 22.1184 8.47387 22.1941C9.82153 22.2698 11.157 22.2576 12.5022 22.2576C13.8498 22.2576 15.1853 22.2698 16.5305 22.1941C18.093 22.1184 19.4797 21.762 20.6223 20.6194C21.7673 19.4744 22.1213 18.0901 22.197 16.5276C22.2751 15.1824 22.2605 13.8469 22.2605 12.4993ZM12.4997 17.5066C9.72875 17.5066 7.49243 15.2703 7.49243 12.4993C7.49243 9.72826 9.72875 7.49194 12.4997 7.49194C15.2707 7.49194 17.5071 9.72826 17.5071 12.4993C17.5071 15.2703 15.2707 17.5066 12.4997 17.5066ZM17.7122 8.45629C17.0652 8.45629 16.5427 7.93383 16.5427 7.28686C16.5427 6.63989 17.0652 6.11743 17.7122 6.11743C18.3591 6.11743 18.8816 6.63989 18.8816 7.28686C18.8818 7.44049 18.8517 7.59264 18.793 7.73461C18.7343 7.87658 18.6481 8.00557 18.5395 8.1142C18.4309 8.22283 18.3019 8.30897 18.1599 8.36767C18.0179 8.42637 17.8658 8.45649 17.7122 8.45629Z"
+                />
+              </g>
+            </svg>
           </a>
           <a
             href="#"
-            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full border border-primary hover:bg-transparent group transition"
           >
-            <img src="./assets/icons/youtube.svg" alt="" />
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="akar-icons:youtube-fill" clip-path="url(#clip0_528_1249)">
+                <path
+                  id="Vector"
+                  d="M24.4798 6.77873C24.3383 6.27377 24.0625 5.81659 23.6819 5.45582C23.2905 5.08395 22.8109 4.81794 22.2881 4.6829C20.3319 4.16727 12.4944 4.16727 12.4944 4.16727C9.22703 4.1301 5.96046 4.2936 2.71314 4.65686C2.19042 4.80187 1.71165 5.07382 1.31939 5.44852C0.933976 5.81936 0.65481 6.27665 0.508976 6.77769C0.158656 8.66492 -0.0115529 10.5812 0.000642899 12.5006C-0.0118571 14.4183 0.157935 16.3339 0.508976 18.2235C0.651685 18.7225 0.92981 19.1777 1.31627 19.5454C1.70273 19.9131 2.18398 20.1787 2.71314 20.3194C4.69544 20.8339 12.4944 20.8339 12.4944 20.8339C15.7659 20.8712 19.0366 20.7077 22.2881 20.3444C22.8109 20.2093 23.2905 19.9433 23.6819 19.5714C24.0624 19.2107 24.3378 18.7535 24.4788 18.2485C24.8382 16.362 25.013 14.445 25.0006 12.5246C25.0277 10.596 24.8531 8.66995 24.4798 6.77769V6.77873ZM10.0027 16.0673V8.93498L16.5236 12.5016L10.0027 16.0673Z"
+                  class="fill-secondary-light group-hover:fill-primary transition"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_528_1249">
+                  <rect width="25" height="25" class="fill-secondary-light" />
+                </clipPath>
+              </defs>
+            </svg>
           </a>
           <a
             href="#"
-            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full border border-primary hover:bg-transparent group transition"
           >
-            <img src="./assets/icons/facebook.svg" alt="" />
+            <svg
+              width="13"
+              height="25"
+              viewBox="0 0 13 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="brandico:facebook" clip-path="url(#clip0_528_1253)">
+                <path
+                  id="Vector"
+                  d="M3.10185 25V13.2693H0V9.04565H3.10185V5.43813C3.10185 2.6033 4.93413 0 9.15608 0C10.8655 0 12.1295 0.163875 12.1295 0.163875L12.0299 4.10803C12.0299 4.10803 10.7408 4.09548 9.33407 4.09548C7.81158 4.09548 7.56765 4.7971 7.56765 5.96163V9.04565H12.1509L11.9515 13.2693H7.56765V25H3.10185Z"
+                  class="fill-secondary-light group-hover:fill-primary"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_528_1253">
+                  <rect
+                    width="12.1509"
+                    height="25"
+                    class="fill-secondary-light"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
           </a>
           <a
             href="#"
-            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full"
+            class="w-10 bg-primary h-10 flex justify-center items-center rounded-full border border-primary hover:bg-transparent group transition"
           >
-            <img src="./assets/icons/twitter.svg" alt="" />
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              class="fill-none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="akar-icons:twitter-fill">
+                <path
+                  id="Vector"
+                  d="M24.6277 5.14208C23.7579 5.52749 22.8235 5.78791 21.8412 5.90562C22.8548 5.29915 23.613 4.34465 23.9745 3.2202C23.0223 3.78582 21.9801 4.18395 20.8933 4.39729C20.1624 3.61694 19.1944 3.09971 18.1395 2.9259C17.0845 2.7521 16.0017 2.93144 15.0592 3.43609C14.1166 3.94074 13.367 4.74245 12.9268 5.71677C12.4866 6.69108 12.3803 7.78348 12.6245 8.82437C10.6951 8.72749 8.80749 8.22598 7.08436 7.35239C5.36123 6.47881 3.84105 5.25266 2.62246 3.75353C2.20579 4.47229 1.96621 5.30562 1.96621 6.19312C1.96575 6.99207 2.16249 7.77879 2.539 8.48346C2.91551 9.18814 3.46013 9.78899 4.12454 10.2327C3.354 10.2082 2.60045 9.99998 1.92663 9.62541V9.68791C1.92655 10.8085 2.31416 11.8946 3.02369 12.7619C3.73322 13.6292 4.72097 14.2243 5.81934 14.4462C5.10453 14.6397 4.3551 14.6682 3.62767 14.5296C3.93756 15.4938 4.54121 16.3369 5.35409 16.941C6.16698 17.545 7.14842 17.8798 8.161 17.8983C6.44208 19.2477 4.31922 19.9797 2.13392 19.9765C1.74682 19.9766 1.36004 19.954 0.975586 19.9087C3.19379 21.335 5.77594 22.0919 8.41309 22.089C17.3402 22.089 22.2204 14.6952 22.2204 8.2827C22.2204 8.07437 22.2152 7.86395 22.2058 7.65562C23.1551 6.96913 23.9745 6.11905 24.6256 5.1452L24.6277 5.14208Z"
+                  class="fill-secondary-light group-hover:fill-primary transition"
+                />
+              </g>
+            </svg>
           </a>
         </div>
       </div>
       <div class="w-full md:w-1/2 lg:w-[13%]">
         <h6 class="text-[1.125rem] font-medium">About</h6>
         <ul class="mt-[2.31rem] flex flex-col gap-5">
-          <li class="opacity-80 text-sm">About Us</li>
-          <li class="opacity-80 text-sm">Features</li>
-          <li class="opacity-80 text-sm">News & Blog</li>
-          <li class="opacity-80 text-sm">Terms & Conditions</li>
+          <li class="opacity-80 text-sm">
+            <a href="#top">About Us</a>
+          </li>
+          <li class="opacity-80 text-sm"><a href="#features">Features</a></li>
+          <li class="opacity-80 text-sm">
+            <a href="#tutorial-section">News & Blog</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#get-started">Terms & Conditions</a>
+          </li>
         </ul>
       </div>
 
       <div class="w-full md:w-1/2 lg:w-[13%]">
         <h6 class="text-[1.125rem] font-medium">Support</h6>
         <ul class="mt-[2.31rem] flex flex-col gap-5">
-          <li class="opacity-80 text-sm">FAQs</li>
-          <li class="opacity-80 text-sm">Support Center</li>
-          <li class="opacity-80 text-sm">Contact Us</li>
-          <li class="opacity-80 text-sm">Privacy Policy</li>
+          <li class="opacity-80 text-sm">
+            <a href="#">FAQs</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#">Support Center</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#">Privacy Policy</a>
+          </li>
         </ul>
       </div>
 
       <div class="w-full md:w-1/2 lg:w-[13%]">
         <h6 class="text-[1.125rem] font-medium">Contact Us</h6>
         <ul class="mt-[2.31rem] flex flex-col gap-5">
-          <li class="opacity-80 text-sm">info@namaste.com</li>
-          <li class="opacity-80 text-sm">Terms & Agreement</li>
-          <li class="opacity-80 text-sm">Privacy Policy</li>
+          <li class="opacity-80 text-sm">
+            <a href="mailto:info@namaste.com">info@namaste.com</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#">Terms & Agreement</a>
+          </li>
+          <li class="opacity-80 text-sm">
+            <a href="#">Privacy Policy</a>
+          </li>
         </ul>
       </div>
     </footer>
@@ -570,11 +690,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script type="module" src="./main.js"></script>
-    <script>
-      const handleSlideChange = (direction, containerId) => {
-        document.querySelector(`#${containerId} .owl-${direction}`).click();
-      };
-      AOS.init();
-    </script>
+    <script src="./js/navCheck.js"></script>
+    <script src="./js/handleSlideChange.js"></script>
   </body>
 </html>

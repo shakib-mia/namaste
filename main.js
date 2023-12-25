@@ -1,8 +1,9 @@
 const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
-  //   console.log(e);
-});
+// alert(window.innerWidth);
+
+// lenis smooth scrolling
+lenis.on("scroll", (e) => {});
 
 function raf(time) {
   lenis.raf(time);
@@ -18,15 +19,18 @@ function handleScrollDown() {
   });
 }
 
+// handling scroll down image in header
+
 document
   .getElementById("scrollDownImage")
   .addEventListener("click", handleScrollDown);
-// document.getElementById("slider").style.marginLeft =
-//   document.getElementById("tutorial").getBoundingClientRect().left + "px";
 
-// console.log();
+// animate on scroll initialization
+
+AOS.init();
 
 $(document).ready(function () {
+  // slider for tutorial section
   $("#tutorial .owl-carousel").owlCarousel({
     items: 3,
     margin: 20,
@@ -46,7 +50,8 @@ $(document).ready(function () {
     },
   });
 
-  $(".owl-carousel").owlCarousel({
+  // slider for testimonial section
+  $("#testimonial .owl-carousel").owlCarousel({
     items: 1,
     margin: 20,
     dots: true,
