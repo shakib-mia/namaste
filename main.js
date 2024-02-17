@@ -12,18 +12,60 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-function handleScrollDown() {
-  window.scrollTo({
+// function handleScrollDown() {
+//   window.scrollTo({
+//     top: window.innerHeight,
+//     behavior: "smooth",
+//   });
+// }
+
+// // handling scroll down image in header
+
+// document
+//   .getElementById("scrollDownImage")
+//   .addEventListener("click", handleScrollDown);
+
+const handleScrollDown = (e) => {
+  window.scrollBy({
     top: window.innerHeight,
     behavior: "smooth",
   });
-}
+};
 
-// handling scroll down image in header
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollButton = document.getElementById("scrollDownImage");
+  var scrollButton2 = document.getElementById("scrollDownImage2");
 
-document
-  .getElementById("scrollDownImage")
-  .addEventListener("click", handleScrollDown);
+  scrollButton.addEventListener("click", function (e) {
+    // Scroll down by 100vh
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  });
+
+  scrollButton2.addEventListener("click", function (e) {
+    // Scroll down by 100vh
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  });
+
+  // Check scroll position to hide button at the bottom
+  window.addEventListener("scroll", function () {
+    var scrollPosition = window.scrollY || window.pageYOffset;
+    var viewportHeight = window.innerHeight;
+
+    if (scrollPosition > document.body.scrollHeight - viewportHeight - 100) {
+      scrollButton.classList.add("opacity-0");
+      scrollButton2.classList.add("opacity-0");
+    } else {
+      scrollButton.classList.remove("opacity-0");
+      scrollButton2.classList.remove("opacity-0");
+    }
+  });
+});
 
 // animate on scroll initialization
 
@@ -57,3 +99,5 @@ $(document).ready(function () {
     dots: true,
   });
 });
+
+document.getElementById("year").innerText = new Date().getFullYear();
