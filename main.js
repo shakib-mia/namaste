@@ -1,7 +1,5 @@
 const lenis = new Lenis();
 
-// alert(window.innerWidth);
-
 // lenis smooth scrolling
 lenis.on("scroll", (e) => {});
 
@@ -11,19 +9,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-// function handleScrollDown() {
-//   window.scrollTo({
-//     top: window.innerHeight,
-//     behavior: "smooth",
-//   });
-// }
-
-// // handling scroll down image in header
-
-// document
-//   .getElementById("scrollDownImage")
-//   .addEventListener("click", handleScrollDown);
 
 const handleScrollDown = (e) => {
   window.scrollBy({
