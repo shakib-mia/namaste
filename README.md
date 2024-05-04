@@ -4,6 +4,8 @@ This website serves as a vibrant showcase for a Yoga Studio, designed to inspire
 
 Based in Sydney, Australia, the studio offers both in-person and online classes, making yoga accessible to everyone, regardless of their location. The site features a user-friendly interface where visitors can learn about the benefits of yoga, explore video courses, and start their journey towards body and mind cleansing. With a clean design and easy navigation, the website aims to attract individuals looking to discover themselves through yoga, offering a community where everyone is welcome to join and transform their lifestyle.
 
+[Click here](https://namaste-raddito.netlify.app/) to get the live preview
+
 ## Packages
 
 1. **AOS (Animate on Scroll)**: For Scrolling Animation
