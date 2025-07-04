@@ -28,7 +28,7 @@ Based in Sydney, Australia, the studio offers both in-person and online classes,
 
 1. Designed By [Kartik Bansal](<https://www.figma.com/file/5Qocnzgr3m9770W0Z1nPHy/Landing-Page-UI-Kit-(Community)?type=design&node-id=528-1128&mode=design&t=unLG1BXWxvYfNUrZ-0>)
 
-2. Developed By [Raddito](https://raddito.com/)
+2. Developed By [Md. Shakib Mia](https://md-shakib-mia.web.app/)
 
 # Available Scripts
 
